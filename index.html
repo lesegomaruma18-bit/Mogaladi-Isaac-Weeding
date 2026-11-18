@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mogaladi & Isaac | Wedding Programme</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 12px;
+    background: #ead9ca;
+    color: #684b3b;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.programme {
+    position: relative;
+    max-width: 760px;
+    margin: auto;
+    padding: 45px 35px;
+    background: #fffaf3;
+    border: 2px solid #c58a61;
+    outline: 1px solid #c58a61;
+    outline-offset: 7px;
+    box-shadow: 0 8px 30px rgba(91, 55, 35, 0.16);
+    overflow: hidden;
+}
+
+/* Floral corner decorations */
+.flower {
+    position: absolute;
+    color: #bd7955;
+    font-size: 42px;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+.top-left {
+    top: 12px;
+    left: 12px;
+}
+
+.top-right {
+    top: 12px;
+    right: 12px;
+}
+
+.bottom-left {
+    bottom: 12px;
+    left: 12px;
+}
+
+.bottom-right {
+    bottom: 12px;
+    right: 12px;
+}
+
+.leaf {
+    position: absolute;
+    color: #9b9b72;
+    font-size: 25px;
+    opacity: 0.8;
+}
+
+.leaf-one {
+    top: 57px;
+    left: 18px;
+    transform: rotate(-35deg);
+}
+
+.leaf-two {
+    top: 57px;
+    right: 18px;
+    transform: rotate(35deg);
+}
+
+.leaf-three {
+    bottom: 55px;
+    left: 18px;
+    transform: rotate(35deg);
+}
+
+.leaf-four {
+    bottom: 55px;
+    right: 18px;
+    transform: rotate(-35deg);
+}
+
+.top-decoration {
+    text-align: center;
+    color: #bd7955;
+    font-size: 20px;
+    letter-spacing: 9px;
+    margin-bottom: 18px;
+}
+
+.small-heading {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #9b735c;
+}
+
+h1 {
+    text-align: center;
+    color: #a65f3e;
+    font-size: clamp(35px, 8vw, 58px);
+    font-weight: normal;
+    margin: 18px 0 5px;
+    line-height: 1.15;
+}
+
+.ampersand {
+    text-align: center;
+    color: #c18a58;
+    font-size: 32px;
+    font-style: italic;
+    margin: 4px 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #92745e;
+    text-transform: uppercase;
+    margin-top: 18px;
+}
+
+.verse {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 18px 15px;
+    text-align: center;
+    border-top: 1px solid #d8b99d;
+    border-bottom: 1px solid #d8b99d;
+    font-size: 15px;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.verse strong {
+    display: block;
+    color: #a65f3e;
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.section-title {
+    text-align: center;
+    color: #a65f3e;
+    font-size: 25px;
+    font-weight: normal;
+    margin: 35px 0 8px;
+}
+
+.flower-divider {
+    text-align: center;
+    color: #bd7955;
+    letter-spacing: 7px;
+    margin: 12px 0 22px;
+    font-size: 17px;
+}
+
+.part-heading {
+    text-align: center;
+    color: #fffaf3;
+    background: #a96645;
+    padding: 12px;
+    margin: 28px 0 18px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.programme-list {
+    max-width: 550px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    align-items: baseline;
+    gap: 13px;
+    padding: 11px 4px;
+    border-bottom: 1px dotted #dfc9b7;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.number {
+    color: #b56f4d;
+    font-size: 15px;
+    min-width: 23px;
+    font-weight: bold;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.person {
+    color: #98735c;
+    font-size: 14px;
+    font-style: italic;
+    text-align: right;
+}
+
+.lunch {
+    margin: 24px 0;
+    padding: 15px;
+    text-align: center;
+    background: #f3e5d9;
+    color: #995a3d;
+    border: 1px solid #d9b89e;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.closing {
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px 12px;
+    border-top: 1px solid #d8b99d;
+}
+
+.closing h2 {
+    font-weight: normal;
+    font-size: 25px;
+    color: #a65f3e;
+}
+
+.closing p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.footer-flower {
+    text-align: center;
+    color: #bd7955;
+    font-size: 25px;
+    letter-spacing: 9px;
+    margin-top: 25px;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 14px 10px;
+    }
+
+    .programme {
+        padding: 40px 19px;
+    }
+
+    .flower {
+        font-size: 30px;
+    }
+
+    .item {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .person {
+        font-size: 12px;
+    }
+
+    .verse {
+        font-size: 14px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .programme {
+        box-shadow: none;
+        outline: none;
+        max-width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="programme">
+
+    <span class="flower top-left">✿</span>
+    <span class="flower top-right">❀</span>
+    <span class="flower bottom-left">❀</span>
+    <span class="flower bottom-right">✿</span>
+
+    <span class="leaf leaf-one">❧</span>
+    <span class="leaf leaf-two">❧</span>
+    <span class="leaf leaf-three">❧</span>
+    <span class="leaf leaf-four">❧</span>
+
+    <div class="top-decoration">✧ ❀ ✧</div>
+
+    <div class="small-heading">
+        A celebration of love
+    </div>
+
+    <h1>Mogaladi</h1>
+
+    <div class="ampersand">&</div>
+
+    <h1>Isaac</h1>
+
+    <div class="subtitle">
+        Wedding Celebration
+    </div>
+
+    <div class="flower-divider">
+        ❀ ───────── ❀
+    </div>
+
+    <div class="verse">
+        "And now these three remain:
+        faith, hope and love.
+        But the greatest of these is love."
+
+        <strong>1 CORINTHIANS 13:13</strong>
+    </div>
+
+    <h2 class="section-title">Order of the Day</h2>
+
+    <div class="flower-divider">✿ ❀ ✿</div>
+
+    <div class="part-heading">Part One</div>
+
+    <div class="programme-list">
+
+        <div class="item">
+            <span class="number">1.</span>
+            <span class="item-name">Opening Prayer</span>
+            <span class="person">Moruti</span>
+        </div>
+
+        <div class="item">
+            <span class="number">2.</span>
+            <span class="item-name">Matrimonial Service</span>
+        </div>
+
+        <div class="item">
+            <span class="number">3.</span>
+            <span class="item-name">Photoshoot</span>
+        </div>
+
+    </div>
+
+    <div class="part-heading">Part Two</div>
+
+    <div class="programme-list">
+
+        <div class="item">
+            <span class="number">1.</span>
+            <span class="item-name">Welcoming of Guests</span>
+        </div>
+
+        <div class="item">
+            <span class="number">2.</span>
+            <span class="item-name">Purpose of the Day</span>
+        </div>
+
+        <div class="item">
+            <span class="number">3.</span>
+            <span class="item-name">Words by Uncle and Aunt</span>
+            <span class="person">Malome, Mmane</span>
+        </div>
+
+        <div class="item">
+            <span class="number">4.</span>
+            <span class="item-name">Words by Neighbour</span>
+            <span class="person">Nkoana</span>
+        </div>
+
+        <div class="item">
+            <span class="number">5.</span>
+            <span class="item-name">Words by In-laws</span>
+            <span class="person">Tladi</span>
+        </div>
+
+    </div>
+
+    <div class="lunch">
+        ✿ &nbsp; LUNCH &nbsp; ✿
+    </div>
+
+    <div class="programme-list">
+
+        <div class="item">
+            <span class="number">7.</span>
+            <span class="item-name">Words by Siblings</span>
+            <span class="person">Enny, Kau, Grace</span>
+        </div>
+
+        <div class="item">
+            <span class="number">8.</span>
+            <span class="item-name">Words by Friend</span>
+            <span class="person">Thabang</span>
+        </div>
+
+        <div class="item">
+            <span class="number">9.</span>
+            <span class="item-name">Words by Colleague</span>
+            <span class="person">Matome</span>
+        </div>
+
+        <div class="item">
+            <span class="number">10.</span>
+            <span class="item-name">Words by the Bride</span>
+        </div>
+
+        <div class="item">
+            <span class="number">11.</span>
+            <span class="item-name">Toast and Cake Cutting</span>
+        </div>
+
+        <div class="item">
+            <span class="number">12.</span>
+            <span class="item-name">Closing Prayer</span>
+        </div>
+
+    </div>
+
+    <div class="closing">
+        <div class="flower-divider">❀ ✧ ❀</div>
+
+        <h2>Thank You</h2>
+
+        <p>
+            Thank you for sharing in this beautiful
+            celebration of love and the beginning
+            of a new journey together.
+        </p>
+
+        <p>
+            May love, joy and God's blessings
+            remain with you always.
+        </p>
+
+        <div class="footer-flower">
+            ❀ ✿ ❀
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
